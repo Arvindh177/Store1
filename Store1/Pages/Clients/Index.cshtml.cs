@@ -25,7 +25,13 @@ namespace Store1.Pages.Clients
                             {
                                 ClientInfo clientInfo = new ClientInfo();
                                 clientInfo.id = "" + reader.GetInt32(0);
-                                clientInfo.id = "" + reader.GetInt32(0);
+                                clientInfo.name =  reader.GetString(1);
+                                clientInfo.email = reader.GetString(2);
+                                clientInfo.phone =  reader.GetString(3);
+                                clientInfo.address=  reader.GetString(4);
+                                clientInfo.created_at = reader.GetDateTime(5).ToString();
+
+                                ListClients.Add(clientInfo);
 
 
                             }
@@ -47,6 +53,7 @@ namespace Store1.Pages.Clients
         public string email;
         public string phone;
         public string address;
+        public string created_at;
     }
     
 
