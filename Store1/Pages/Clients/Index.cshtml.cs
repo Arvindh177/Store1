@@ -12,7 +12,7 @@ namespace Store1.Pages.Clients
             try
             {
        
-                string connectionString = "Data Source=.\\sqlexpress;Initial Catalog=Store1;Integrated Security=True";
+                string connectionString = "  ";
                 using (SqlConnection connection = new SqlConnection(connectionString)) 
                 {
                     connection.Open();
